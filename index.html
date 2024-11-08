@@ -3,107 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Booking</title>
+    <title>Beautiful Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    
-<!-- Header Section -->
-<header class="header">
-    <h1>Welcome to Paradise Hotel</h1>
-    <p>Your perfect stay starts here!</p>
-
-    
-    
-</header> 
- 
-
-
-
-    
-    <!-- Room Gallery Section -->
-    <section class="gallery">
-        <h1>Our Rooms</h>
-        <div class="gallery-grid">
-            <div class="room-card">
-                <img src="photo1.webp" alt="Room 1">
-                <h3>Deluxe Room</h3>
-                <p>From ₹1000 per night</p>
-            </div>
-            <div class="room-card">
-                <img src="photo2.webp" alt="Room 2">
-                <h3>Suite Room</h3>
-                <p>From ₹2000 per night</p>
-            </div>
-            <div class="room-card">
-                <img src="photo3.avif" alt="Room 3">
-                <h3>Standard Room</h3>
-                <p>From ₹800 per night</p>
-            </div>
-
-            <div class="room-card">
-                <img src="photo4.avif" alt="Room 3">
-                <h3>Standard Room</h3>
-                <p>From ₹800 per night</p>
-            </div>
-
-            <div class="room-card">
-                <img src="photo5.avif" alt="Room 3">
-                <h3>Standard Room</h3>
-                <p>From ₹800 per night</p>
-            </div>
-
-            <div class="room-card">
-                <img src="photo6.avif" alt="Room 3">
-                <h3>Standard Room</h3>
-                <p>From ₹800 per night</p>
-            </div>
-
+    <div class="calculator">
+        <input type="text" id="display" class="display" disabled />
+        <div class="buttons">
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="deleteChar()">DEL</button>
+            <button onclick="appendToDisplay('%')">%</button>
+            <button onclick="appendToDisplay('/')">÷</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">×</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">−</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('0')" class="zero">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
         </div>
-    </section>
-
-    <!-- Booking Form Section -->
-     <section class="booking-form">
-        <h2>Book Your Stay</h2>
-        <form id="bookingForm">
-            <label for="name">Full Name:</label>
-            <input type="text" id="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" required>
-
-            <label for="checkin">Check-in Date:</label>
-            <input type="date" id="checkin" required>
-
-            <label for="checkout">Check-out Date:</label>
-            <input type="date" id="checkout" required>
-
-            <label for="roomType">Room Type:</label>
-            <select id="roomType">
-                <option value="deluxe">Deluxe Room</option>
-                <option value="suite">Suite Room</option>
-                <option value="standard">Standard Room</option>
-            </select>
-
-            <button type="submit">Book Now</button>
-        </form>
-    </section> 
-
-
-
-
-    
-
-
-
-
-
-    <!-- Footer Section -->
-    <footer class="footer">
-        <p>&copy; 2024 Paradise Hotel. All rights reserved.</p>
-    </footer>
-
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
